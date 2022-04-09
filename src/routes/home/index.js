@@ -3,6 +3,7 @@
 const express = require("express");
 const router = express.Router();
 
+// 컨트롤러
 const ctrl = require("./home.ctrl");
 
 //루트 화면

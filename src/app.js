@@ -18,8 +18,7 @@
 const express = require("express");
 const app = express();
 
-// 포트
-const PORT = 3000;
+
 
 // 라우팅
 const home = require("./routes/home");

@@ -9,8 +9,11 @@ loginbtn.addEventListener("click", login);
 function login(){
     const req ={
         id: id.value,
-        pwd: id.value,
+        pwd: pwd.value,
     };
-
     console.log(req);
+    console.log(JSON.stringify(req));
+    // fetch("/login",{
+    //     body: JSON.stringify(req)
+    // })
 }

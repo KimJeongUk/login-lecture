@@ -6,6 +6,7 @@ class UserStorage {
         pwd: ["123", "1324"],
         name: ["김정욱", "ㅁㄴㅇㄹ"],
     };
+
     // static으로 접근가능 #으로 은닉화
 
     static getUsers(...fields) {
@@ -30,6 +31,16 @@ class UserStorage {
         }, {});
 
         return userInfo;
+
+    }
+
+    static save(userInfo) {
+        const users = this.#users;
+        users.id.push(userInfo.id);
+        users.name.push(userInfo.name);
+        users.pwd.push(userInfo.pwd);
+        console.log(users)
+
 
     }
 }

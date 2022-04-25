@@ -9,10 +9,12 @@ const registerbtn = document.querySelector("#button");
 registerbtn.addEventListener("click", register);
 
 function register(){
+    if(pwd !== confirmPwd){
+        return alert("비밀번호가 일치하지 않습니다");
+    }
     const req ={
         id: id.value,
         name: name.value,
-        confirmPwd: confirmPwd.value,
         pwd: pwd.value,
     };
 

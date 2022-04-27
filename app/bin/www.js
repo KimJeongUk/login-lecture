@@ -1,6 +1,6 @@
 "use strict";
 
-const app = require("../app");
+const app = require("../app.js");
 // 포트
 const PORT = process.env.PORT || 3000;
 

@@ -12,6 +12,7 @@ class UserStorage {
             db.query(query, [id] , (err, data) =>{
                 if(err) reject(`${err}`);
                 else resolve(data[0]);
+                // console.log(data[0]);
             });
         });
    
@@ -21,14 +22,16 @@ class UserStorage {
 
     static async save(userInfo) {
         return new Promise((resolve, reject) =>{
-            const query = "INSERT INTO users(id, name, pwd) VALUES(?,?,?);";
+            const query = "INSERT INTO users(id, name, pwd, image) VALUES(?,?,?,?);";
             db.query(query, 
-                [userInfo.id, userInfo.name, userInfo.pwd], 
+                [userInfo.id, userInfo.name, userInfo.pwd, userInfo.image], 
                 (err) =>{
                 if(err) reject(`${err}`);
                 else resolve({ success : true });
             });
         });
+
+        
     
       
      

@@ -4,6 +4,7 @@ const id = document.querySelector("#id");
 const name = document.querySelector("#name");
 const pwd = document.querySelector("#pwd");
 const confirmPwd = document.querySelector("#confirm-pwd");
+const image = document.querySelector("#image")
 const registerbtn = document.querySelector("#button");
 
 registerbtn.addEventListener("click", register);
@@ -15,10 +16,15 @@ function register(){
     if(pwd.value !== confirmPwd.value){
         return alert("비밀번호가 일치하지 않습니다");
     }
+    if(!image.value)
+    {
+        return alert("파일을 넣어주십시오");
+    }
     const req ={
         id: id.value,
         name: name.value,
         pwd: pwd.value,
+        image: image.value,
     };
 
     fetch("/register", {

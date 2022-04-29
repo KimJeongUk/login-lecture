@@ -26,7 +26,6 @@ class User{
 
     async register(){
         const client = this.body;
-
         try{
             const response = await UserStorage.save(client);
             return response;

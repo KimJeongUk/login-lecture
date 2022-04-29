@@ -35,7 +35,6 @@ app.use(express.static(`${__dirname}/src/public`));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); //url을 통해 전달되는 데이터에 한글, 공백 등과 같은 문자가 제대로 인식되지 않는 문제 해결
 
-
 app.use("/", home); // use -> 미들웨어를 등록해주는 메소드
 
 module.exports = app;
